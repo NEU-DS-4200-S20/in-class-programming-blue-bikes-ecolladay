@@ -90,7 +90,7 @@ function spatial(opts={}) {
          d3.min(data, d => +d['trip start count']),
          d3.max(data, d => +d['trip start count'])
          ])
-       .range([1, 100]);
+       .range([1, 40]);
 
     points = points.enter()
       .append("circle")
