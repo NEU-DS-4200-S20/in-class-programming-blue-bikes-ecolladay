@@ -12,8 +12,8 @@ function spatial(opts={}) {
       right: 0,
       bottom: 0
     },
-    width = 500, // change this to the screenshot's width
-    height = 500, // change this to the screenshot's height
+    width = 707, // change this to the screenshot's width
+    height = 813, // change this to the screenshot's height
     xValue = d => d[0],
     yValue = d => d[1],
     xLabelText = "",
