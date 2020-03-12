@@ -85,12 +85,12 @@ function spatial(opts={}) {
     // YOUR CODE HERE:
     // Here, you can modify the radius or any other quality of the points
     // in order to encode additional data.
-    // rScale
-    //   .domain([
-    //     d3.min(data, d => +d['trip start count']),
-    //     d3.max(data, d => +d['trip start count'])
-    //     ])
-    //   .range([1, 100]);
+     rScale
+       .domain([
+         d3.min(data, d => +d['trip start count']),
+         d3.max(data, d => +d['trip start count'])
+         ])
+       .range([1, 100]);
 
     points = points.enter()
       .append("circle")
@@ -98,8 +98,7 @@ function spatial(opts={}) {
       .merge(points)
         .attr("cx", X)
         .attr("cy", Y)
-        .attr("r", (d) => { return 5; })
-        // .attr("r", (d) => { return rScale(+d['trip start count'])})
+        .attr("r", (d) => { return rScale(+d['trip start count'])})
         .attr("fill", "purple")
         .attr("opacity", 0.7);
     
